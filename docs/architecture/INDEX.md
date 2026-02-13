@@ -1,102 +1,102 @@
-# Índice da Documentação - Prisma
+# Documentation Index - Prisma
 
-## 📂 Estrutura de Documentos
+## 📂 Document Structure
 
 ```
 docs/
-├── README.md                                    # Visão geral e quick start
+├── README.md                                    # Overview and quick start
 └── architecture/
-    ├── INDEX.md                                 # Este arquivo (índice detalhado)
-    ├── README.md                                # Guia de navegação da arquitetura
-    ├── ARCHITECTURE_RECOMMENDATIONS.md          # Stack e decisões arquiteturais
-    └── DATABASE_DESIGN.md                       # Schema e modelagem de dados
+    ├── INDEX.md                                 # This file (detailed index)
+    ├── README.md                                # Architecture navigation guide
+    ├── ARCHITECTURE_RECOMMENDATIONS.md          # Stack and architectural decisions
+    └── DATABASE_DESIGN.md                       # Schema and data modeling
 ```
 
-## 🎯 Navegação Rápida por Papel
+## 🎯 Quick Navigation by Role
 
-### 👨‍💻 Desenvolvedor Frontend
-1. [Stack Frontend](./ARCHITECTURE_RECOMMENDATIONS.md#-frontend)
-2. [Integração com Backend](./ARCHITECTURE_RECOMMENDATIONS.md#layer-1-frontend-vue-3)
+### 👨‍💻 Frontend Developer
+1. [Frontend Stack](./ARCHITECTURE_RECOMMENDATIONS.md#-frontend)
+2. [Backend Integration](./ARCHITECTURE_RECOMMENDATIONS.md#layer-1-frontend-vue-3)
 
-### 👨‍💻 Desenvolvedor Backend
-1. [Stack Backend](./ARCHITECTURE_RECOMMENDATIONS.md#-backend-spring-boot-3--java-17-recomendado)
-2. [Database Schema](./DATABASE_DESIGN.md#entidades-e-tabelas)
-3. [Autenticação Canvas](./ARCHITECTURE_RECOMMENDATIONS.md#-autenticação-via-canvas-lms)
+### 👨‍💻 Backend Developer
+1. [Backend Stack](./ARCHITECTURE_RECOMMENDATIONS.md#-backend-spring-boot-3--java-17-recommended)
+2. [Database Schema](./DATABASE_DESIGN.md#entities-and-tables)
+3. [Canvas Authentication](./ARCHITECTURE_RECOMMENDATIONS.md#-authentication-via-canvas-lms)
 
-### 🏗️ Arquiteto de Software
-1. [Decisões Arquiteturais](./ARCHITECTURE_RECOMMENDATIONS.md#-arquitetura-recomendada-microserviços-com-serverless)
-2. [Modelagem de Dados](./DATABASE_DESIGN.md#diagrama-er-entity-relationship)
-3. [Escalabilidade](./DATABASE_DESIGN.md#escalabilidade)
+### 🏗️ Software Architect
+1. [Architectural Decisions](./ARCHITECTURE_RECOMMENDATIONS.md#-recommended-architecture-microservices-with-serverless)
+2. [Data Modeling](./DATABASE_DESIGN.md#er-entity-relationship-diagram)
+3. [Scalability](./DATABASE_DESIGN.md#scalability)
 
 ### 📊 Product Manager
-1. [Roadmap](./ARCHITECTURE_RECOMMENDATIONS.md#-roadmap-de-implementação)
-2. [Comparação de Custos](./ARCHITECTURE_RECOMMENDATIONS.md#-comparação-de-opções)
+1. [Roadmap](./ARCHITECTURE_RECOMMENDATIONS.md#-implementation-roadmap)
+2. [Cost Comparison](./ARCHITECTURE_RECOMMENDATIONS.md#-comparison-of-options)
 
-## 📖 Navegação por Tópico
+## 📖 Navigation by Topic
 
-### 🏛️ Arquitetura
-- [Visão Geral](./ARCHITECTURE_RECOMMENDATIONS.md#-arquitetura-recomendada-microserviços-com-serverless)
-- [Microserviços](./ARCHITECTURE_RECOMMENDATIONS.md#layer-3-microserviços)
+### 🏛️ Architecture
+- [Overview](./ARCHITECTURE_RECOMMENDATIONS.md#-recommended-architecture-microservices-with-serverless)
+- [Microservices](./ARCHITECTURE_RECOMMENDATIONS.md#layer-3-microservices)
 - [Deployment](./ARCHITECTURE_RECOMMENDATIONS.md#-deployment)
 
-### 🗄️ Banco de Dados
-- [Diagrama ER](./DATABASE_DESIGN.md#diagrama-er-entity-relationship)
-- [Tabelas](./DATABASE_DESIGN.md#entidades-e-tabelas)
-- [Queries Comuns](./DATABASE_DESIGN.md#queries-comuns)
-- [Índices](./DATABASE_DESIGN.md#índices-e-performance)
+### 🗄️ Database
+- [ER Diagram](./DATABASE_DESIGN.md#er-entity-relationship-diagram)
+- [Tables](./DATABASE_DESIGN.md#entities-and-tables)
+- [Common Queries](./DATABASE_DESIGN.md#common-queries)
+- [Indexes](./DATABASE_DESIGN.md#indexes-and-performance)
 
 ### 🤖 Autograder & Feedback
-- [Sistema de Feedback](./ARCHITECTURE_RECOMMENDATIONS.md#-sistema-de-autograder-com-feedback-inteligente)
-- [Configuração](./ARCHITECTURE_RECOMMENDATIONS.md#configuração-do-autograder)
-- [Otimizações](./ARCHITECTURE_RECOMMENDATIONS.md#otimizações)
+- [Feedback System](./ARCHITECTURE_RECOMMENDATIONS.md#-autograder-system-with-intelligent-feedback)
+- [Configuration](./ARCHITECTURE_RECOMMENDATIONS.md#autograder-configuration)
+- [Optimizations](./ARCHITECTURE_RECOMMENDATIONS.md#optimizations)
 
-### 🔐 Autenticação
-- [Canvas OAuth2](./ARCHITECTURE_RECOMMENDATIONS.md#-autenticação-via-canvas-lms)
-- [Fluxo de Auth](./ARCHITECTURE_RECOMMENDATIONS.md#fluxo-oauth2-com-canvas)
-- [Segurança](./ARCHITECTURE_RECOMMENDATIONS.md#segurança)
+### 🔐 Authentication
+- [Canvas OAuth2](./ARCHITECTURE_RECOMMENDATIONS.md#-authentication-via-canvas-lms)
+- [Auth Flow](./ARCHITECTURE_RECOMMENDATIONS.md#oauth2-flow-with-canvas)
+- [Security](./ARCHITECTURE_RECOMMENDATIONS.md#security)
 
-### ⚡ Execução de Código
-- [Sandbox](./ARCHITECTURE_RECOMMENDATIONS.md#-execução-de-código---crítico)
-- [Segurança](./ARCHITECTURE_RECOMMENDATIONS.md#-execução-de-código---crítico)
+### ⚡ Code Execution
+- [Sandbox](./ARCHITECTURE_RECOMMENDATIONS.md#-code-execution---critical)
+- [Security](./ARCHITECTURE_RECOMMENDATIONS.md#-code-execution---critical)
 
-## 🔍 Busca Rápida
+## 🔍 Quick Search
 
-### Conceitos Chave
+### Key Concepts
 
-| Conceito | Documento | Seção |
+| Concept | Document | Section |
 |----------|-----------|-------|
-| **Autograder** | [ARCHITECTURE_RECOMMENDATIONS.md](./ARCHITECTURE_RECOMMENDATIONS.md) | Sistema de Autograder |
-| **Canvas OAuth2** | [ARCHITECTURE_RECOMMENDATIONS.md](./ARCHITECTURE_RECOMMENDATIONS.md) | Autenticação via Canvas |
-| **Sandbox** | [ARCHITECTURE_RECOMMENDATIONS.md](./ARCHITECTURE_RECOMMENDATIONS.md) | Execução de Código |
+| **Autograder** | [ARCHITECTURE_RECOMMENDATIONS.md](./ARCHITECTURE_RECOMMENDATIONS.md) | Autograder System |
+| **Canvas OAuth2** | [ARCHITECTURE_RECOMMENDATIONS.md](./ARCHITECTURE_RECOMMENDATIONS.md) | Authentication via Canvas |
+| **Sandbox** | [ARCHITECTURE_RECOMMENDATIONS.md](./ARCHITECTURE_RECOMMENDATIONS.md) | Code Execution |
 | **Learning Resources** | [DATABASE_DESIGN.md](./DATABASE_DESIGN.md) | LearningResource |
 | **Spring Boot** | [ARCHITECTURE_RECOMMENDATIONS.md](./ARCHITECTURE_RECOMMENDATIONS.md) | Backend |
 | **JPA/Hibernate** | [DATABASE_DESIGN.md](./DATABASE_DESIGN.md) | ORM |
-| **PostgreSQL** | [DATABASE_DESIGN.md](./DATABASE_DESIGN.md) | Banco de Dados |
-| **Microserviços** | [ARCHITECTURE_RECOMMENDATIONS.md](./ARCHITECTURE_RECOMMENDATIONS.md) | Layer 3 |
+| **PostgreSQL** | [DATABASE_DESIGN.md](./DATABASE_DESIGN.md) | Database |
+| **Microservices** | [ARCHITECTURE_RECOMMENDATIONS.md](./ARCHITECTURE_RECOMMENDATIONS.md) | Layer 3 |
 
-### Stack Tecnológico
+### Technology Stack
 
-| Tecnologia | Uso | Documento |
+| Technology | Use | Document |
 |------------|-----|-----------|
 | **Vue 3** | Frontend | [ARCHITECTURE_RECOMMENDATIONS.md](./ARCHITECTURE_RECOMMENDATIONS.md#-frontend) |
-| **Spring Boot** | Backend | [ARCHITECTURE_RECOMMENDATIONS.md](./ARCHITECTURE_RECOMMENDATIONS.md#-backend-spring-boot-3--java-17-recomendado) |
+| **Spring Boot** | Backend | [ARCHITECTURE_RECOMMENDATIONS.md](./ARCHITECTURE_RECOMMENDATIONS.md#-backend-spring-boot-3--java-17-recommended) |
 | **PostgreSQL** | Database | [DATABASE_DESIGN.md](./DATABASE_DESIGN.md) |
 | **Redis** | Cache | [ARCHITECTURE_RECOMMENDATIONS.md](./ARCHITECTURE_RECOMMENDATIONS.md#-cache) |
-| **Canvas LMS** | Auth & Sync | [ARCHITECTURE_RECOMMENDATIONS.md](./ARCHITECTURE_RECOMMENDATIONS.md#-autenticação-via-canvas-lms) |
-| **JPA/Hibernate** | ORM | [DATABASE_DESIGN.md](./DATABASE_DESIGN.md#migrations-e-versionamento) |
+| **Canvas LMS** | Auth & Sync | [ARCHITECTURE_RECOMMENDATIONS.md](./ARCHITECTURE_RECOMMENDATIONS.md#-authentication-via-canvas-lms) |
+| **JPA/Hibernate** | ORM | [DATABASE_DESIGN.md](./DATABASE_DESIGN.md#migrations-and-versioning) |
 
-## 📝 Glossário
+## 📝 Glossary
 
-- **Prisma**: Plataforma educacional completa para ensino de programação
-- **Autograder**: Sistema de correção automática integrado ao Prisma com feedback inteligente
-- **Canvas OAuth2**: Autenticação via Canvas LMS (SSO)
-- **Sandbox**: Ambiente isolado para executar código não confiável
-- **Learning Resource**: Recurso educacional vinculado a testes
-- **Submission**: Código submetido pelo aluno
-- **Activity**: Problema de programação com testes
-- **Class**: Turma/disciplina
-- **Enrollment**: Matrícula de aluno em turma
+- **Prisma**: Complete educational platform for programming education
+- **Autograder**: Automatic grading system integrated into Prisma with intelligent feedback
+- **Canvas OAuth2**: Authentication via Canvas LMS (SSO)
+- **Sandbox**: Isolated environment to execute untrusted code
+- **Learning Resource**: Educational resource linked to tests
+- **Submission**: Code submitted by student
+- **Activity**: Programming problem with tests
+- **Class**: Course/class
+- **Enrollment**: Student enrollment in a class
 
 ---
 
-**Dica**: Use Ctrl+F (ou Cmd+F) para buscar termos específicos!
+**Tip**: Use Ctrl+F (or Cmd+F) to search for specific terms!

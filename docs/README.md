@@ -1,71 +1,71 @@
-# Documentação do Prisma
+# Prisma Documentation
 
-Plataforma educacional para ensino de programação que utiliza o sistema **Autograder** para correção automática de código com feedback inteligente integrado ao Canvas LMS.
+Educational platform for programming education that uses the **Autograder** system for automatic code grading with intelligent feedback integrated with Canvas LMS.
 
-## 📚 Documentos Principais
+## 📚 Main Documents
 
-### 1. [Recomendações de Arquitetura](./architecture/ARCHITECTURE_RECOMMENDATIONS.md)
-Stack tecnológico, decisões arquiteturais e roadmap de implementação.
+### 1. [Architecture Recommendations](./architecture/ARCHITECTURE_RECOMMENDATIONS.md)
+Technology stack, architectural decisions, and implementation roadmap.
 
-**Leia se você quer:**
-- Entender a arquitetura completa do sistema
-- Conhecer as tecnologias escolhidas e por quê
-- Ver o roadmap de implementação
-- Comparar opções de deployment
+**Read if you want to:**
+- Understand the complete system architecture
+- Learn about chosen technologies and why
+- See the implementation roadmap
+- Compare deployment options
 
-### 2. [Design do Banco de Dados](./architecture/DATABASE_DESIGN.md)
-Schema completo, relacionamentos, queries e estratégias de escalabilidade.
+### 2. [Database Design](./architecture/DATABASE_DESIGN.md)
+Complete schema, relationships, queries, and scalability strategies.
 
-**Leia se você quer:**
-- Entender o modelo de dados
-- Ver queries SQL otimizadas
-- Implementar migrations
-- Configurar backups e replicação
+**Read if you want to:**
+- Understand the data model
+- See optimized SQL queries
+- Implement migrations
+- Configure backups and replication
 
-### 3. [Índice Completo](./architecture/INDEX.md)
-Navegação detalhada por papel, tópico e tecnologia.
+### 3. [Complete Index](./architecture/INDEX.md)
+Detailed navigation by role, topic, and technology.
 
-**Leia se você quer:**
-- Encontrar rapidamente um tópico específico
-- Navegar por conceitos e tecnologias
-- Ver glossário de termos
+**Read if you want to:**
+- Quickly find a specific topic
+- Navigate through concepts and technologies
+- See glossary of terms
 
 ## 🚀 Quick Start
 
-### Para Desenvolvedores Novos
+### For New Developers
 
-1. Leia [Recomendações de Arquitetura](./architecture/ARCHITECTURE_RECOMMENDATIONS.md) - Seção "Análise do Contexto"
-2. Veja [Design do Banco de Dados](./architecture/DATABASE_DESIGN.md) - Diagrama ER
-3. Configure o ambiente seguindo o [Roadmap](./architecture/ARCHITECTURE_RECOMMENDATIONS.md#-roadmap-de-implementação)
+1. Read [Architecture Recommendations](./architecture/ARCHITECTURE_RECOMMENDATIONS.md) - "Context Analysis" section
+2. See [Database Design](./architecture/DATABASE_DESIGN.md) - ER Diagram
+3. Set up environment following the [Roadmap](./architecture/ARCHITECTURE_RECOMMENDATIONS.md#-implementation-roadmap)
 
-### Para Implementar Features
+### To Implement Features
 
-1. Consulte [Database Design](./architecture/DATABASE_DESIGN.md) para ver tabelas necessárias
-2. Siga os padrões em [Architecture Recommendations](./architecture/ARCHITECTURE_RECOMMENDATIONS.md)
-3. Implemente seguindo o fluxo de microserviços
+1. Check [Database Design](./architecture/DATABASE_DESIGN.md) for required tables
+2. Follow patterns in [Architecture Recommendations](./architecture/ARCHITECTURE_RECOMMENDATIONS.md)
+3. Implement following microservices flow
 
-## 🎯 Visão Geral do Sistema
+## 🎯 System Overview
 
-### O que é?
+### What is it?
 
-Um autograder inteligente que:
-- ✅ Executa código de alunos em ambiente seguro (sandbox)
-- ✅ Gera feedback personalizado e contextualizado
-- ✅ Vincula recursos de aprendizagem a erros específicos
-- ✅ Integra com Canvas LMS via OAuth2
-- ✅ Fornece analytics e dashboards para professores
+An intelligent autograder that:
+- ✅ Executes student code in a secure environment (sandbox)
+- ✅ Generates personalized and contextualized feedback
+- ✅ Links learning resources to specific errors
+- ✅ Integrates with Canvas LMS via OAuth2
+- ✅ Provides analytics and dashboards for instructors
 
-### Stack Tecnológico (MVP)
+### Technology Stack (MVP)
 
 ```
 Frontend:  Vue 3 + Vite
 Backend:   Spring Boot + Java 17
 Database:  PostgreSQL
 Auth:      Canvas OAuth2
-Autograder: Sistema de feedback inteligente
+Autograder: Intelligent feedback system
 ```
 
-### Arquitetura
+### Architecture
 
 ```
 ┌─────────────┐
@@ -84,53 +84,53 @@ Autograder: Sistema de feedback inteligente
 └────────┘└────┘ └──────────┘
 ```
 
-## 📖 Conceitos Principais
+## 📖 Core Concepts
 
-### Prisma (Plataforma)
-Plataforma educacional completa para ensino de programação, incluindo gestão de turmas, atividades, submissões e acompanhamento de progresso dos alunos.
+### Prisma (Platform)
+Complete educational platform for programming education, including class management, activities, submissions, and student progress tracking.
 
-### Autograder (Sistema de Correção)
-Componente responsável pela correção automática que executa testes e gera feedback inteligente. O Autograder é integrado ao Prisma para processar as submissões dos alunos.
+### Autograder (Grading System)
+Component responsible for automatic grading that executes tests and generates intelligent feedback. The Autograder is integrated into Prisma to process student submissions.
 
 ### Canvas OAuth2
-Autenticação única via Canvas LMS. Todos os usuários (alunos e professores) fazem login através do Canvas.
+Single sign-on via Canvas LMS. All users (students and instructors) log in through Canvas.
 
 ### Sandbox Execution
-Código dos alunos é executado em ambiente isolado e seguro para prevenir ataques.
+Student code is executed in an isolated and secure environment to prevent attacks.
 
 ### Learning Resources
-URLs educacionais vinculadas a testes específicos. Quando um teste falha, o recurso é recomendado automaticamente.
+Educational URLs linked to specific tests. When a test fails, the resource is automatically recommended.
 
-## 🔗 Links Rápidos
+## 🔗 Quick Links
 
-- [Stack Tecnológico](./architecture/ARCHITECTURE_RECOMMENDATIONS.md#stack-tecnológico-recomendado)
-- [Autenticação Canvas](./architecture/ARCHITECTURE_RECOMMENDATIONS.md#-autenticação-via-canvas-lms)
-- [Sistema de Feedback](./architecture/ARCHITECTURE_RECOMMENDATIONS.md#-sistema-de-autograder-com-feedback-inteligente)
-- [Execução de Código](./architecture/ARCHITECTURE_RECOMMENDATIONS.md#-execução-de-código---crítico)
-- [Schema do Banco](./architecture/DATABASE_DESIGN.md#entidades-e-tabelas)
+- [Technology Stack](./architecture/ARCHITECTURE_RECOMMENDATIONS.md#recommended-technology-stack)
+- [Canvas Authentication](./architecture/ARCHITECTURE_RECOMMENDATIONS.md#-authentication-via-canvas-lms)
+- [Feedback System](./architecture/ARCHITECTURE_RECOMMENDATIONS.md#-autograder-system-with-intelligent-feedback)
+- [Code Execution](./architecture/ARCHITECTURE_RECOMMENDATIONS.md#-code-execution---critical)
+- [Database Schema](./architecture/DATABASE_DESIGN.md#entities-and-tables)
 - [Deployment](./architecture/ARCHITECTURE_RECOMMENDATIONS.md#-deployment)
-- [Roadmap](./architecture/ARCHITECTURE_RECOMMENDATIONS.md#-roadmap-de-implementação)
+- [Roadmap](./architecture/ARCHITECTURE_RECOMMENDATIONS.md#-implementation-roadmap)
 
-## 💡 Dúvidas Frequentes
+## 💡 Frequently Asked Questions
 
-**Q: Por que Canvas OAuth2 em vez de auth próprio?**
-A: Integração com LMS existente, SSO para alunos, sincronização automática de turmas.
+**Q: Why Canvas OAuth2 instead of custom auth?**
+A: Integration with existing LMS, SSO for students, automatic class synchronization.
 
-**Q: Por que executar código em sandbox?**
-A: Segurança. Código não confiável precisa rodar em ambiente isolado.
+**Q: Why execute code in a sandbox?**
+A: Security. Untrusted code needs to run in an isolated environment.
 
-**Q: Como funciona o sistema de feedback?**
-A: O Autograder analisa os resultados dos testes e gera feedback contextualizado e personalizado para ajudar o aluno a aprender.
+**Q: How does the feedback system work?**
+A: The Autograder analyzes test results and generates contextualized and personalized feedback to help students learn.
 
-## 📝 Contribuindo
+## 📝 Contributing
 
-Ao adicionar nova documentação:
-1. Mantenha consistência com docs existentes
-2. Adicione links no INDEX.md
-3. Use exemplos de código quando relevante
-4. Inclua diagramas para conceitos complexos
+When adding new documentation:
+1. Maintain consistency with existing docs
+2. Add links in INDEX.md
+3. Use code examples when relevant
+4. Include diagrams for complex concepts
 
 ---
 
-**Última atualização:** 2024-02-13
-**Versão:** 1.0.0
+**Last updated:** 2024-02-13
+**Version:** 1.0.0

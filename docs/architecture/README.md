@@ -1,79 +1,79 @@
-# Arquitetura do Prisma
+# Prisma Architecture
 
-Documentação técnica completa da plataforma educacional e seu sistema de correção automática (Autograder) com feedback inteligente.
+Complete technical documentation of the educational platform and its automatic grading system (Autograder) with intelligent feedback.
 
-## 📚 Documentos
+## 📚 Documents
 
 ### [ARCHITECTURE_RECOMMENDATIONS.md](./ARCHITECTURE_RECOMMENDATIONS.md)
-**Stack tecnológico, decisões arquiteturais e roadmap**
+**Technology stack, architectural decisions, and roadmap**
 
-Contém:
-- Análise de requisitos e desafios
-- Stack recomendado (Vue 3, Spring Boot, PostgreSQL)
-- Autenticação via Canvas OAuth2
-- Sistema de autograder com feedback inteligente
-- Execução segura de código (sandbox)
-- Opções de deployment (Docker)
-- Roadmap de implementação (6 semanas)
-- Comparação de custos
+Contains:
+- Requirements and challenges analysis
+- Recommended stack (Vue 3, Spring Boot, PostgreSQL)
+- Authentication via Canvas OAuth2
+- Autograder system with intelligent feedback
+- Secure code execution (sandbox)
+- Deployment options (Docker)
+- Implementation roadmap (6 weeks)
+- Cost comparison
 
 ### [DATABASE_DESIGN.md](./DATABASE_DESIGN.md)
-**Schema completo e modelagem de dados**
+**Complete schema and data modeling**
 
-Contém:
-- Diagrama ER com 13 tabelas
-- Schema SQL completo
-- Relacionamentos e índices
-- Queries comuns otimizadas
-- Estratégias de backup e escalabilidade
-- Migrations com Flyway/Liquibase
+Contains:
+- ER diagram with 13 tables
+- Complete SQL schema
+- Relationships and indexes
+- Optimized common queries
+- Backup and scalability strategies
+- Migrations with Flyway/Liquibase
 - Row Level Security (RLS)
 
 ### [INDEX.md](./INDEX.md)
-**Índice detalhado e navegação**
+**Detailed index and navigation**
 
-Contém:
-- Navegação por papel (Frontend, Backend, Arquiteto, PM)
-- Navegação por tópico (Auth, Database, Feedback, etc)
-- Busca rápida de conceitos
-- Glossário de termos
-- Links para documentação oficial
+Contains:
+- Navigation by role (Frontend, Backend, Architect, PM)
+- Navigation by topic (Auth, Database, Feedback, etc)
+- Quick concept search
+- Glossary of terms
+- Links to official documentation
 
-## 🎯 Por onde começar?
+## 🎯 Where to start?
 
-### Sou novo no projeto
-1. Leia [ARCHITECTURE_RECOMMENDATIONS.md](./ARCHITECTURE_RECOMMENDATIONS.md) - Seção "Análise do Contexto"
-2. Veja [DATABASE_DESIGN.md](./DATABASE_DESIGN.md) - Diagrama ER
-3. Use [INDEX.md](./INDEX.md) para navegar por tópicos específicos
+### I'm new to the project
+1. Read [ARCHITECTURE_RECOMMENDATIONS.md](./ARCHITECTURE_RECOMMENDATIONS.md) - "Context Analysis" section
+2. See [DATABASE_DESIGN.md](./DATABASE_DESIGN.md) - ER Diagram
+3. Use [INDEX.md](./INDEX.md) to navigate specific topics
 
-### Vou implementar uma feature
-1. Consulte [DATABASE_DESIGN.md](./DATABASE_DESIGN.md) - Tabelas necessárias
-2. Veja [ARCHITECTURE_RECOMMENDATIONS.md](./ARCHITECTURE_RECOMMENDATIONS.md) - Serviços envolvidos
-3. Siga os padrões arquiteturais definidos
+### I'm implementing a feature
+1. Check [DATABASE_DESIGN.md](./DATABASE_DESIGN.md) - Required tables
+2. See [ARCHITECTURE_RECOMMENDATIONS.md](./ARCHITECTURE_RECOMMENDATIONS.md) - Involved services
+3. Follow defined architectural patterns
 
-### Preciso tomar decisões técnicas
-1. Leia [ARCHITECTURE_RECOMMENDATIONS.md](./ARCHITECTURE_RECOMMENDATIONS.md) - Comparação de opções
-2. Veja [DATABASE_DESIGN.md](./DATABASE_DESIGN.md) - Escalabilidade
-3. Consulte [INDEX.md](./INDEX.md) - Links externos úteis
+### I need to make technical decisions
+1. Read [ARCHITECTURE_RECOMMENDATIONS.md](./ARCHITECTURE_RECOMMENDATIONS.md) - Options comparison
+2. See [DATABASE_DESIGN.md](./DATABASE_DESIGN.md) - Scalability
+3. Check [INDEX.md](./INDEX.md) - Useful external links
 
-## 🔑 Conceitos Principais
+## 🔑 Core Concepts
 
-### Prisma (Plataforma)
-Plataforma educacional completa que gerencia turmas, atividades, submissões e progresso dos alunos. Integra-se com Canvas LMS e utiliza o Autograder para correção automática.
+### Prisma (Platform)
+Complete educational platform that manages classes, activities, submissions, and student progress. Integrates with Canvas LMS and uses the Autograder for automatic grading.
 
-### Autograder (Sistema de Correção)
-Componente do Prisma responsável pela correção automática que executa testes e gera feedback inteligente.
+### Autograder (Grading System)
+Prisma component responsible for automatic grading that executes tests and generates intelligent feedback.
 
 ### Canvas OAuth2
-Autenticação única via Canvas LMS. Todos os usuários fazem login através do Canvas, eliminando necessidade de gerenciar senhas.
+Single sign-on via Canvas LMS. All users log in through Canvas, eliminating the need to manage passwords.
 
 ### Sandbox Execution
-Código dos alunos é executado em ambiente isolado para prevenir ataques e garantir segurança.
+Student code is executed in an isolated environment to prevent attacks and ensure security.
 
 ### Learning Resources
-URLs educacionais vinculadas a testes específicos. Quando um teste falha, recursos relevantes são recomendados automaticamente.
+Educational URLs linked to specific tests. When a test fails, relevant resources are automatically recommended.
 
-## 🏗️ Arquitetura em Resumo
+## 🏗️ Architecture Summary
 
 ```
 Frontend (Vue 3)
@@ -85,29 +85,29 @@ Backend (Spring Boot)
 Postgres Redis  Autograder
 ```
 
-**Stack MVP:**
+**MVP Stack:**
 - Frontend: Vue 3 + Vite
 - Backend: Spring Boot 3 + Java 17
 - Database: PostgreSQL
 - Auth: Canvas OAuth2
-- Autograder: Sistema de feedback inteligente
+- Autograder: Intelligent feedback system
 
-## 📖 Leitura Recomendada
+## 📖 Recommended Reading
 
-1. **Dia 1:** [Análise do Contexto](./ARCHITECTURE_RECOMMENDATIONS.md#análise-do-contexto)
-2. **Dia 2:** [Stack Tecnológico](./ARCHITECTURE_RECOMMENDATIONS.md#stack-tecnológico-recomendado)
-3. **Dia 3:** [Database Design](./DATABASE_DESIGN.md#diagrama-er-entity-relationship)
-4. **Dia 4:** [Autenticação Canvas](./ARCHITECTURE_RECOMMENDATIONS.md#-autenticação-via-canvas-lms)
-5. **Dia 5:** [Sistema de Feedback](./ARCHITECTURE_RECOMMENDATIONS.md#-sistema-de-autograder-com-feedback-inteligente)
+1. **Day 1:** [Context Analysis](./ARCHITECTURE_RECOMMENDATIONS.md#context-analysis)
+2. **Day 2:** [Technology Stack](./ARCHITECTURE_RECOMMENDATIONS.md#recommended-technology-stack)
+3. **Day 3:** [Database Design](./DATABASE_DESIGN.md#er-entity-relationship-diagram)
+4. **Day 4:** [Canvas Authentication](./ARCHITECTURE_RECOMMENDATIONS.md#-authentication-via-canvas-lms)
+5. **Day 5:** [Feedback System](./ARCHITECTURE_RECOMMENDATIONS.md#-autograder-system-with-intelligent-feedback)
 
-## 🔗 Links Rápidos
+## 🔗 Quick Links
 
-- [Roadmap de Implementação](./ARCHITECTURE_RECOMMENDATIONS.md#-roadmap-de-implementação)
-- [Comparação de Deployment](./ARCHITECTURE_RECOMMENDATIONS.md#-comparação-de-opções)
-- [Schema SQL Completo](./DATABASE_DESIGN.md#entidades-e-tabelas)
-- [Queries Comuns](./DATABASE_DESIGN.md#queries-comuns)
-- [Glossário](./INDEX.md#-glossário)
+- [Implementation Roadmap](./ARCHITECTURE_RECOMMENDATIONS.md#-implementation-roadmap)
+- [Deployment Comparison](./ARCHITECTURE_RECOMMENDATIONS.md#-comparison-of-options)
+- [Complete SQL Schema](./DATABASE_DESIGN.md#entities-and-tables)
+- [Common Queries](./DATABASE_DESIGN.md#common-queries)
+- [Glossary](./INDEX.md#-glossary)
 
 ---
 
-**Última atualização:** 2024-02-13
+**Last updated:** 2024-02-13

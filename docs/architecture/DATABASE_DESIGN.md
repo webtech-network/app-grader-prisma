@@ -599,16 +599,16 @@ WHERE tr.submission_id = $1
 GROUP BY tr.id, tc.id;
 ```
 
-## Migrations e Versionamento
+## Migrations and Versioning
 
-### Estratégia de Migrations
+### Migration Strategy
 
-1. **Ferramenta**: Usar Flyway ou Liquibase para migrations com Spring Boot
-2. **Versionamento**: Cada migration tem timestamp único (V1__description.sql)
-3. **Rollback**: Sempre criar migrations reversíveis
-4. **Testes**: Testar migrations em ambiente de staging
+1. **Tool**: Use database migration tool (Flyway, Liquibase, or similar)
+2. **Versioning**: Each migration has unique timestamp (V1__description.sql)
+3. **Rollback**: Always create reversible migrations
+4. **Testing**: Test migrations in staging environment
 
-### Exemplo de Migration (Flyway)
+### Migration Example
 
 ```sql
 -- V1__create_users_table.sql
@@ -634,84 +634,6 @@ CREATE TABLE users (
 CREATE INDEX idx_users_email ON users(email);
 CREATE INDEX idx_users_canvas_id ON users(canvas_id);
 CREATE INDEX idx_users_role ON users(role);
-```
-
-### Exemplo de Entity JPA
-
-```java
-@Entity
-@Table(name = "users", indexes = {
-    @Index(name = "idx_users_email", columnList = "email"),
-    @Index(name = "idx_users_canvas_id", columnList = "canvas_id"),
-    @Index(name = "idx_users_role", columnList = "role")
-})
-@Data
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
-public class User {
-    
-    @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID id;
-    
-    @Column(nullable = false, unique = true)
-    private String email;
-    
-    @Column(name = "password_hash", nullable = false)
-    private String passwordHash;
-    
-    @Column(name = "full_name", nullable = false)
-    private String fullName;
-    
-    @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
-    private UserRole role;
-    
-    @Column(name = "avatar_url")
-    private String avatarUrl;
-    
-    @CreationTimestamp
-    @Column(name = "created_at", nullable = false, updatable = false)
-    private LocalDateTime createdAt;
-    
-    @UpdateTimestamp
-    @Column(name = "updated_at", nullable = false)
-    private LocalDateTime updatedAt;
-    
-    @Column(name = "last_login_at")
-    private LocalDateTime lastLoginAt;
-    
-    @Column(name = "is_active", nullable = false)
-    private Boolean isActive = true;
-    
-    @Column(name = "canvas_id", unique = true)
-    private String canvasId;
-    
-    @Column(name = "canvas_access_token", columnDefinition = "TEXT")
-    private String canvasAccessToken;
-    
-    @Column(name = "canvas_refresh_token", columnDefinition = "TEXT")
-    private String canvasRefreshToken;
-    
-    @Column(name = "canvas_token_expires_at")
-    private LocalDateTime canvasTokenExpiresAt;
-    
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private List<Enrollment> enrollments = new ArrayList<>();
-    
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    private List<Submission> submissions = new ArrayList<>();
-    
-    @OneToMany(mappedBy = "instructor", cascade = CascadeType.ALL)
-    private List<ClassEntity> classesAsInstructor = new ArrayList<>();
-}
-
-public enum UserRole {
-    STUDENT,
-    INSTRUCTOR,
-    ADMIN
-}
 ```
 
 ## Segurança e Permissões
@@ -795,21 +717,26 @@ CREATE TABLE submissions_2024_02 PARTITION OF submissions
 - **Master-Slave**: Para leitura distribuída
 - **Read Replicas**: Para queries de analytics e relatórios
 
-## Considerações Finais
+## Final Considerations
 
-Este design de banco de dados:
+This database design:
 
-✅ Suporta todos os requisitos do Prisma
-✅ Permite escalabilidade horizontal e vertical
-✅ Inclui índices para queries comuns
-✅ Implementa relacionamentos adequados
-✅ Suporta auditoria e segurança
-✅ Facilita analytics e relatórios
-✅ É extensível para futuras funcionalidades
+✅ Supports all Prisma requirements
+✅ Allows horizontal and vertical scalability
+✅ Includes indexes for common queries
+✅ Implements appropriate relationships
+✅ Supports auditing and security
+✅ Facilitates analytics and reports
+✅ Is extensible for future features
 
-**Próximos Passos:**
-1. Implementar migrations com Flyway ou Liquibase
-2. Criar seeds para dados de teste usando Spring Boot CommandLineRunner
-3. Implementar API REST sobre este schema com Spring Boot
-4. Configurar backups automatizados
-5. Implementar cache (Redis) para queries frequentes
+**Next Steps:**
+1. Implement migrations with chosen migration tool
+2. Create seeds for test data
+3. Implement REST API over this schema
+4. Configure automatic backups
+5. Implement cache (Redis) for frequent queries
+
+---
+
+**Last updated:** 2024-02-13
+**Version:** 1.0.0
